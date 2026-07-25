@@ -324,7 +324,32 @@ sudo systemctl status jenkins
 http://13.206.83.5:8080
 ```
 
+
+
+## 📦  Install Docker 
+
+apt install docker.io -y
+
+
 ---
+
+## 📦  Install Latest Maven Version (Manual Installation)
+
+> ⚠️ We are installing **latest Maven manually** instead of using `apt install maven`
+
+```bash
+cd /opt
+sudo wget https://dlcdn.apache.org/maven/maven-3/3.9.11/binaries/apache-maven-3.9.11-bin.tar.gz
+sudo tar -xvzf apache-maven-3.9.11-bin.tar.gz
+sudo ln -s /opt/apache-maven-3.9.11 /opt/maven
+sudo ln -s /opt/maven/bin/mvn /usr/bin/mvn
+sudo apt install maven -y
+```
+Verify Maven installation:
+
+```bash
+mvn --version
+```
 
 # Docker Permission for Jenkins
 
